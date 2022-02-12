@@ -9,6 +9,9 @@ const Header = () => {
                         <img src="/monochrome_slime.svg" height="100%" width="100%"/>
                     </li>
                     <li className={styles.navigation}>
+                        <a href="https://hide0.net/service">Service</a>
+                    </li>
+                    <li className={styles.navigation}>
                         <a href="https://blog.hide0.net">Blog</a>
                     </li>
                     <li className={styles.navigation}>
