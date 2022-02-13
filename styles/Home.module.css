@@ -23,6 +23,15 @@
     }
 }
 
+@keyframes timeOpacitySix {
+    from {
+        opacity: 0.6;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @keyframes flowing-anim {
     0% {
         width: 0%;
@@ -150,7 +159,26 @@
     }
 }
 
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 360px) {
+    .infoZone {
+        padding: 5px;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .shortMessage h2 {
+        font-weight: bold;
+        font-size: 30px;
+        color: rgba(0, 0, 0, 0);
+        text-shadow: 5px 5px 0 rgb(85, 171, 221);
+        -webkit-text-stroke: 1px #ffffff;
+        text-stroke: 1px #ffffff;
+        padding: 0 0 10px;
+    }
+}
+
+@media only screen and (min-width: 361px) and (max-width: 435px) {
     .infoZone {
         padding: 5px;
         max-width: 90%;
@@ -163,8 +191,8 @@
         font-size: 40px;
         color: rgba(0, 0, 0, 0);
         text-shadow: 5px 5px 0 rgb(85, 171, 221);
-        -webkit-text-stroke: 0.5px #ffffff;
-        text-stroke: 0.5px #ffffff;
+        -webkit-text-stroke: 1px #ffffff;
+        text-stroke: 1px #ffffff;
         padding: 0 0 10px;
     }
 }
@@ -182,8 +210,8 @@
         font-size: 50px;
         color: rgba(0, 0, 0, 0);
         text-shadow: 5px 5px 0 rgb(85, 171, 221);
-        -webkit-text-stroke: 0.5px #ffffff;
-        text-stroke: 0.5px #ffffff;
+        -webkit-text-stroke: 1px #ffffff;
+        text-stroke: 1px #ffffff;
         padding: 0 0 10px;
     }
 }
@@ -288,4 +316,7 @@
 
 .row {
     padding: 10px 0
+}
+.fullImage {
+    animation: timeOpacitySix 2s;
 }

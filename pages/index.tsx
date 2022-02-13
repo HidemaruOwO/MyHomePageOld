@@ -1,6 +1,6 @@
 import type {NextPage} from "next";
 import Image from "next/image";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Container, Row, Button} from "react-bootstrap";
 import styles from "../styles/Home.module.css";
 import HeadInfo from "../components/Head";
@@ -25,7 +25,7 @@ const Home: NextPage = () => {
             message: "無限の可能性",
             message2: "　溢れ出る想像力",
             image: "/image/background/minecraft.jpg",
-            page: "/minecraft"
+            page: "/service/minecraft"
         },
         {
             message: "有益な情報",
@@ -34,32 +34,57 @@ const Home: NextPage = () => {
             page: "https://blog.hide0.net"
         },
         {
-            message: "革新的で",
-            message2: "　便利なウェブアプリ",
+            message: "直感的で革新的",
+            message2: "　　　　Slim App",
             image: "/image/background/future.jpeg",
             page: "/app"
         }
     ];
     var topPageItemsNumber: number = 0;
     const [topPage, setTopPage] = useState<TopPage>(topPageItems[0]);
+    const [reAnim, setReAnim] = useState({
+        opacitySix: styles.fullImage,
+        flowing: styles.shortMessage
+    })
     const redoTopPageItem = () => {
-        topPageItemsNumber++;
-        if (topPageItemsNumber == topPageItems.length) {
-            topPageItemsNumber = 0;
-        }
-        setTopPage(topPageItems[topPageItemsNumber]);
-        console.log(topPageItemsNumber + "|" + topPageItems.length);
+
     }
-    //setInterval(redoTopPageItem,4000);
+    useEffect(() => {
+        const topImageAnim = setInterval(() => {
+            topPageItemsNumber++;
+            if (topPageItemsNumber == topPageItems.length) {
+                topPageItemsNumber = 0;
+            }
+            setTopPage(topPageItems[topPageItemsNumber]);
+            setReAnim(() => {
+                return ({
+                    opacitySix: "",
+                    flowing: ""
+                });
+            });
+            setTimeout(()=> {
+                setReAnim(() => {
+                    return ({
+                        opacitySix: styles.fullImage,
+                        flowing: styles.shortMessage
+                    });
+                });
+            },0)
+        }, 4500);
+        return () => clearInterval(topImageAnim);
+    }, [])
+
+    //setInterval(redoTopPageItem, 4000);
+
     return (
         <>
             <HeadInfo title="ホーム" description="一学生がプログラミングをして提供する有用な記事と便利なソフトを集めたひでまるの公式サイト" dir="/"
                       image="/image/ogp/index.png"/>
-            <img src={topPage.image} className="fullImage" alt={"BackImage"}/>
+            <img src={topPage.image} className={reAnim.opacitySix + " " + "fullImage"} alt={"BackImage"}/>
             {/* eslint-disable-next-line @next/next/no-sync-scripts */}
             <script src={"/js/changeSize.js"}/>
             <div className={styles.el_box}>
-                <div className={styles.shortMessage}>
+                <div className={reAnim.flowing}>
                     <h2>{topPage.message}<br/>{topPage.message2}</h2>
                     <hr/>
                 </div>
@@ -88,6 +113,8 @@ const Home: NextPage = () => {
                     <Button variant="primary" href={"/app"}>More App</Button>
                 </Row>
             </Container>
+            {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+            <script src={"/js/antiDrag.js"}/>
         </>
     );
 };
