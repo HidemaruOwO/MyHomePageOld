@@ -11,7 +11,7 @@ const ItemUrl = ({title, description, image, url}: ItemProps) => {
     return (
         <>
 
-            <Card style={{width: '18rem'}} className={styles.noline}>
+            <Card style={{width: '18rem'}} className={styles.nolineCenter}>
                 <a href={url}>
                     <Card.Img variant="top" src={image} />
                     <Card.Body>

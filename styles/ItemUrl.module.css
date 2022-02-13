@@ -1,8 +1,13 @@
-.noline a {
+.nolineCenter a {
     color: #000000;
     text-decoration-line: none;
 }
-.noline a:hover {
+.nolineCenter a:hover {
     color: #000000;
     text-decoration-line: none;
+}
+.nolineCenter {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
 }
