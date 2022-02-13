@@ -7,7 +7,9 @@
     text-decoration-line: none;
 }
 .nolineCenter {
-    text-align: center;
     margin-right: auto;
     margin-left: auto;
+}
+.nolineCenterImg {
+    text-align: center;
 }
