@@ -19,15 +19,34 @@ const Home: NextPage = () => {
             image: "/image/background/niwa.jpeg",
             page: "/#aboutSite"
         },
+        {
+            message: "無限の可能性",
+            message2: "　溢れ出る想像力",
+            image: "/image/background/minecraft.jpg",
+            page: "/minecraft"
+        },
+        {
+            message: "有益な情報",
+            message2: "　ひでまるぶろぐ",
+            image: "/image/background/laptopPcOnDesk.jpeg",
+            page: "https://blog.hide0.net"
+        },
+        {
+            message: "革新的で",
+            message2: "　便利なウェブアプリ",
+            image: "/image/background/future.jpeg",
+            page: "/app"
+        }
     ];
-    let topPageItemsNumber:number = 0;
-    const [topPage, setTopPage] = useState<TopPage>(topPageItems[topPageItemsNumber]);
+    var topPageItemsNumber:number = 0;
+    const [topPage, setTopPage] = useState<TopPage>(topPageItems[0]);
     const redoTopPageItem = () => {
         topPageItemsNumber++;
-        if (topPageItemsNumber>topPageItems.length) {
+        if (topPageItemsNumber==topPageItems.length) {
             topPageItemsNumber = 0;
         }
         setTopPage(topPageItems[topPageItemsNumber]);
+        console.log(topPageItemsNumber+"|"+topPageItems.length);
     }
     setInterval(redoTopPageItem,4000);
     return (
