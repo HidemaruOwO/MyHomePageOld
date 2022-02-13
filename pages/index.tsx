@@ -1,11 +1,13 @@
 import type {NextPage} from "next";
 import Image from "next/image";
 import {useEffect, useState} from "react";
-import {Container, Row, Button} from "react-bootstrap";
+import {Container, Row, Button, Col} from "react-bootstrap";
 import styles from "../styles/Home.module.css";
 import HeadInfo from "../components/Head";
 import ItemUrl from "../components/ItemUrl";
+import MyProfile from "../components/MyProfile";
 import appList from "../data/appList";
+import {getWindowSize} from "../hooks/getWindowSize";
 
 type TopPage = {
     message: string;
@@ -13,7 +15,10 @@ type TopPage = {
     image: string;
     page: string;
 }
+
 const Home: NextPage = () => {
+    const {height, width} = getWindowSize();
+    var hidemalTwitter;
     const topPageItems = [
         {
             message: "豊かな生活",
@@ -40,6 +45,7 @@ const Home: NextPage = () => {
             page: "/app"
         }
     ];
+
     var topPageItemsNumber: number = 0;
     const [topPage, setTopPage] = useState<TopPage>(topPageItems[0]);
     const [reAnim, setReAnim] = useState({
@@ -62,20 +68,27 @@ const Home: NextPage = () => {
                     flowing: ""
                 });
             });
-            setTimeout(()=> {
+            setTimeout(() => {
                 setReAnim(() => {
                     return ({
                         opacitySix: styles.fullImage,
                         flowing: styles.shortMessage
                     });
                 });
-            },0)
+            }, 0)
         }, 4500);
         return () => clearInterval(topImageAnim);
     }, [])
 
-    //setInterval(redoTopPageItem, 4000);
-
+    if (600 < width) {
+        hidemalTwitter = (
+            <Col>
+                <div className={"overflow-auto p-3 mb-3 mb-md-0 mr-md-3 bg-light"} style={{height: "442.2px"}}><a className="twitter-timeline" href="https://twitter.com/Hidemal_OwO?ref_src=twsrc%5Etfw">Tweets by
+                    Hidemal_OwO</a>
+                </div>
+            </Col>
+        );
+    }
     return (
         <>
             <HeadInfo title="ホーム" description="一学生がプログラミングをして提供する有用な記事と便利なソフトを集めたひでまるの公式サイト" dir="/"
@@ -111,6 +124,17 @@ const Home: NextPage = () => {
                     <ItemUrl title={appList[2].title} description={appList[2].description} image={appList[2].image}
                              url={appList[2].url}/>
                     <Button variant="primary" href={"/app"}>More App</Button>
+                </Row>
+                <Row className={styles.row}>
+                    <h2>New Blog</h2>
+                    <p>正しいかつ価値のある情報を分かりやすくまとめます</p>
+                </Row>
+                <Row className={styles.row}>
+                    <h2>自己紹介</h2>
+                    <Col>
+                        <MyProfile/>
+                    </Col>
+                    {hidemalTwitter}
                 </Row>
             </Container>
             {/* eslint-disable-next-line @next/next/no-sync-scripts */}

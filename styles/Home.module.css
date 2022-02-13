@@ -320,3 +320,10 @@
 .fullImage {
     animation: timeOpacitySix 2s;
 }
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.twitter_viewer {
+    max-height: 442.2ox;
+}
