@@ -30,6 +30,7 @@ const HeadInfo = ({title, description, dir, image}: HeadI) => {
             <title>{pageTitle}</title>
             <link rel="canonical" href={pageUrl}/>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+            <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"/>
             <meta name="author" content={author}/>
             <meta name="description" content={pageDescription}/>
             <meta charSet="utf-8"/>
