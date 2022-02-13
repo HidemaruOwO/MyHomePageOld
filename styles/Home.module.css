@@ -1,22 +1,19 @@
 @font-face {
     font-family: "rennersemi";
-    src: url("https://indestructibletype-fonthosting.github.io/renner_600_semi-webfont.woff2")
-    format("woff2"),
-    url("https://indestructibletype-fonthosting.github.io/renner_600_semi-webfont.woff")
-    format("woff");
+    src: url("https://indestructibletype-fonthosting.github.io/renner_600_semi-webfont.woff2") format("woff2"),
+    url("https://indestructibletype-fonthosting.github.io/renner_600_semi-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "rennersemi";
-    src: url("https://indestructibletype-fonthosting.github.io/renner_600_semi_italic-webfont.woff2")
-    format("woff2"),
-    url("https://indestructibletype-fonthosting.github.io/renner_600_semi_italic-webfont.woff")
-    format("woff");
+    src: url("https://indestructibletype-fonthosting.github.io/renner_600_semi_italic-webfont.woff2") format("woff2"),
+    url("https://indestructibletype-fonthosting.github.io/renner_600_semi_italic-webfont.woff") format("woff");
     font-weight: normal;
     font-style: italic;
 }
+
 @keyframes timeOpacity {
     from {
         opacity: 0;
@@ -25,6 +22,7 @@
         opacity: 1;
     }
 }
+
 @keyframes flowing-anim {
     0% {
         width: 0%;
@@ -33,6 +31,7 @@
         width: 100%;
     }
 }
+
 .container {
     padding: 0 2rem;
 }
@@ -158,6 +157,7 @@
         margin-left: auto;
         margin-right: auto;
     }
+
     .shortMessage h2 {
         font-weight: bold;
         font-size: 40px;
@@ -168,6 +168,7 @@
         padding: 0 0 10px;
     }
 }
+
 @media only screen and (min-width: 436px) {
     .infoZone {
         max-width: 60%;
@@ -175,6 +176,7 @@
         margin-right: auto;
         padding: 10px;
     }
+
     .shortMessage h2 {
         font-weight: bold;
         font-size: 50px;
@@ -185,6 +187,7 @@
         padding: 0 0 10px;
     }
 }
+
 @media only screen and (min-width: 651px) {
     .shortMessage h2 {
         font-weight: bold;
@@ -202,23 +205,28 @@
     bottom: 280px;
     left: 12%;
 }
+
 .el_box a {
     text-decoration: none;
 }
+
 .el_box a:hover {
     text-decoration: none;
 }
+
 .shortMessage {
     margin: 0;
     white-space: nowrap;
     overflow: hidden;
     animation: flowing-anim 2.4s;
 }
+
 .shortMessage hr {
     border: none;
     background: radial-gradient(#faaf32, #fcd592);
     opacity: 1;
 }
+
 .aboutContainer {
     font-family: rennersemi;
     color: #dacfad;
@@ -234,6 +242,7 @@
     animation-fill-mode: forwards;
     opacity: 0;
 }
+
 .aboutContainer:hover {
     font-family: rennersemi;
     color: #ffffff;
@@ -249,23 +258,34 @@
     animation-fill-mode: forwards;
     opacity: 0;
 }
+
 .aboutContainer h4 {
     margin-top: -2px;
     text-align: center;
 }
 
 .container {
-    max-width:918px;
-    padding: 10px;
+    max-width: 918px;
+    padding: 20px;
 }
+
 .container h2 {
     padding: 0.5em;
     background: #fae8d1;
     border-left: solid 5px #ffaf58;
 }
+
 .container img {
     text-align: center;
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.itemCenter {
+    text-align: center;
+}
+
+.row {
+    padding: 10px 0
 }
