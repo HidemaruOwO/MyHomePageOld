@@ -1,23 +1,18 @@
 import styles from "../styles/Footer.module.css";
-import appList from "../data/appList";
 
 const Footer = () => {
     return (
         <footer>
             <div className={styles.footer}>
-                <h1><a href={"/"}>ホーム</a></h1>
-                <h1><a href={"/app"}>アプリ</a></h1>
-                {
-                    [0, 1, 2, 3, 4].map((i: number,index) => {
-                        // eslint-disable-next-line react/jsx-key
-                        return (<h2 key={index}><a href={appList[i].url}>{appList[i].title}</a></h2>)
-                    })
-                }
-                <h1><a href={"/blog"}>ブログ</a></h1>
-                <h1><a href={"/service"}>サービス</a></h1>
-                <h1><a href={"/"}>プライバシーポリシー</a></h1>
-                <h1><a href={"/profile"}>投稿者プロフィール</a></h1>
-                <h1><a href={"/form"}>お問い合わせ</a></h1>
+                <ul className={styles.footer_list}>
+                    <li>ホーム</li>
+                    <li>アプリ</li>
+                    <li>ブログ</li>
+                    <li>サービス</li>
+                    <li>プライバシーポリシー</li>
+                    <li>投稿者プロフィール</li>
+                    <li>お問い合わせ</li>
+                </ul>
                 <div className={styles.copy_light}>
                     <small>© 2022 HIDEMAL inc.</small>
                 </div>

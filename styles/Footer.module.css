@@ -1,23 +1,9 @@
 .footer {
-    background-color: #EEE;
-    padding: 10px;
+  background-color: #EEE;
+  padding: 10px;
 }
-
-.footer h1 a {
-    color: #2b546a;
-    text-decoration: none;
+.footer_list {
 }
-
-.footer h2 a {
-    color: #6783a0;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    color: #8be0e6;
-    text-decoration: none;
-}
-
 .copy_light {
-    text-align: center;
+  text-align: center;
 }

@@ -83,8 +83,7 @@ const Home: NextPage = () => {
     if (600 < width) {
         hidemalTwitter = (
             <Col>
-                <div className={"overflow-auto p-3 mb-3 mb-md-0 mr-md-3 bg-light"} style={{height: "442.2px"}}><a
-                    className="twitter-timeline" href="https://twitter.com/Hidemal_OwO?ref_src=twsrc%5Etfw">Tweets by
+                <div className={"overflow-auto p-3 mb-3 mb-md-0 mr-md-3 bg-light"} style={{height: "442.2px"}}><a className="twitter-timeline" href="https://twitter.com/Hidemal_OwO?ref_src=twsrc%5Etfw">Tweets by
                     Hidemal_OwO</a>
                 </div>
             </Col>
@@ -118,18 +117,17 @@ const Home: NextPage = () => {
                 <Row className={styles.row}>
                     <h2>New App</h2>
                     <p>「あったらいいな」を実現するウェブアプリをご利用ください!</p>
-                    {[0, 1, 2].map((i:number,index) => (
-                        // eslint-disable-next-line react/jsx-key
-                        <ItemUrl title={appList[i].title} description={appList[i].description} image={appList[i].image}
-                                 url={appList[i].url} key={index}/>
-                    ))}
-
+                    <ItemUrl title={appList[0].title} description={appList[0].description} image={appList[0].image}
+                             url={appList[0].url}/>
+                    <ItemUrl title={appList[1].title} description={appList[1].description} image={appList[1].image}
+                             url={appList[1].url}/>
+                    <ItemUrl title={appList[2].title} description={appList[2].description} image={appList[2].image}
+                             url={appList[2].url}/>
                     <Button variant="primary" href={"/app"}>More App</Button>
                 </Row>
                 <Row className={styles.row}>
                     <h2>New Blog</h2>
                     <p>正しいかつ価値のある情報を分かりやすくまとめます</p>
-                    <Button variant="primary" href={"https:/blog.hide0.net"}>More Blog</Button>
                 </Row>
                 <Row className={styles.row}>
                     <h2>自己紹介</h2>
