@@ -81,6 +81,8 @@ const Home: NextPage = () => {
       <Image
         src={topPage.image}
         className={reAnim.opacitySix + " " + "fullImage"}
+        height={"100%"}
+        width={"100%"}
         alt={"BackImage"}
       />
       {/* eslint-disable-next-line @next/next/no-sync-scripts */}
@@ -109,7 +111,12 @@ const Home: NextPage = () => {
             <br />
             日が経つ度にサイトは更新されるので、定期的に確認してもらうと嬉しいです。
           </p>
-          <Image src={"/image/ogp/index.png"} alt={"このサイトの紹介"} />
+          <Image
+            src={"/image/ogp/index.png"}
+            alt={"このサイトの紹介"}
+            height={"100%"}
+            width={"100%"}
+          />
         </Row>
         <Row className={styles.row}>
           <h2>New App</h2>
