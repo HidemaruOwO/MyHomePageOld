@@ -8,6 +8,7 @@ import HeadInfo from "../components/Head";
 import ItemUrl from "../components/ItemUrl";
 import MyProfile from "../components/MyProfile";
 import appList from "../data/appList.json";
+import topPageItems from "../data/topPageItem.json";
 import { getWindowSize } from "../hooks/getWindowSize";
 
 type TopPage = {
@@ -20,33 +21,6 @@ type TopPage = {
 const Home: NextPage = () => {
   const { height, width } = getWindowSize();
   var hidemalTwitter;
-  const topPageItems = [
-    {
-      message: "豊かな生活",
-      message2: "　楽しく過ごそう",
-      image: "/image/background/niwa.jpeg",
-      page: "/#aboutSite",
-    },
-    {
-      message: "無限の可能性",
-      message2: "　溢れ出る想像力",
-      image: "/image/background/minecraft.jpg",
-      page: "/service/minecraft",
-    },
-    {
-      message: "有益な情報",
-      message2: "　ひでまるぶろぐ",
-      image: "/image/background/laptopPcOnDesk.jpeg",
-      page: "https://blog.hide0.net",
-    },
-    {
-      message: "直感的で革新的",
-      message2: "　　　　Slim App",
-      image: "/image/background/future.jpeg",
-      page: "/app",
-    },
-  ];
-
   var topPageItemsNumber: number = 0;
   const [topPage, setTopPage] = useState<TopPage>(topPageItems[0]);
   const [reAnim, setReAnim] = useState({
