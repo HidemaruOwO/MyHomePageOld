@@ -1,5 +1,6 @@
 import { Card } from "react-bootstrap";
 import styles from "../styles/ItemUrl.module.css";
+import Link from "next/link";
 
 type ItemProps = {
   title: string;
@@ -11,7 +12,7 @@ const ItemUrl = ({ title, description, image, url }: ItemProps) => {
   return (
     <>
       <Card style={{ width: "18rem" }} className={styles.nolineCenter}>
-        <a href={url}>
+        <Link href={url} passHref>
           <div className={styles.img}>
             <Card.Img
               variant="top"
@@ -23,7 +24,7 @@ const ItemUrl = ({ title, description, image, url }: ItemProps) => {
             <Card.Title>{title}</Card.Title>
             <Card.Text>{description}</Card.Text>
           </Card.Body>
-        </a>
+        </Link>
       </Card>
     </>
   );

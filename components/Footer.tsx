@@ -1,5 +1,6 @@
 import styles from "../styles/Footer.module.css";
 import appList from "../data/appList.json";
+import Link from "next/link";
 import { Col, Row } from "react-bootstrap";
 
 const Footer = () => {
@@ -9,24 +10,24 @@ const Footer = () => {
         <Row>
           <Col>
             <h1>
-              <a href={"/"}>ホーム</a>
+              <Link href={"/"}>ホーム</Link>
             </h1>
             <h1>
-              <a href={"/service"}>サービス</a>
+              <Link href={"/service"}>サービス</Link>
             </h1>
             <h1>
-              <a href={"/policypolicy"}>プライバシーポリシー</a>
+              <Link href={"/policypolicy"}>プライバシーポリシー</Link>
             </h1>
             <h1>
-              <a href={"/profile"}>投稿者プロフィール</a>
+              <Link href={"/profile"}>投稿者プロフィール</Link>
             </h1>
             <h1>
-              <a href={"/form"}>お問い合わせ</a>
+              <Link href={"/form"}>お問い合わせ</Link>
             </h1>
           </Col>
           <Col>
             <h1>
-              <a href={"/app"}>アプリ</a>
+              <Link href={"/app"}>アプリ</Link>
             </h1>
             <Row>
               <Col>
@@ -34,7 +35,7 @@ const Footer = () => {
                   // eslint-disable-next-line react/jsx-key
                   return (
                     <h2 key={index}>
-                      <a href={appList[i].url}>{appList[i].title}</a>
+                      <Link href={appList[i].url}>{appList[i].title}</Link>
                     </h2>
                   );
                 })}
@@ -44,7 +45,7 @@ const Footer = () => {
                   // eslint-disable-next-line react/jsx-key
                   return (
                     <h2 key={index}>
-                      <a href={appList[i].url}>{appList[i].title}</a>
+                      <Link href={appList[i].url}>{appList[i].title}</Link>
                     </h2>
                   );
                 })}
@@ -53,7 +54,7 @@ const Footer = () => {
           </Col>
           <Col>
             <h1>
-              <a href={"/blog"}>ブログ</a>
+              <Link href={"/blog"}>ブログ</Link>
             </h1>
           </Col>
           <div className={styles.copy_light}>
