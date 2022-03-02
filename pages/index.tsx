@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Container, Row, Button, Col } from "react-bootstrap";
 import styles from "../styles/Home.module.css";
@@ -52,11 +53,11 @@ const Home: NextPage = () => {
     opacitySix: styles.fullImage,
     flowing: styles.shortMessage,
   });
-  const redoTopPageItem = () => {};
   useEffect(() => {
     const topImageAnim = setInterval(() => {
       topPageItemsNumber++;
       if (topPageItemsNumber == topPageItems.length) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         topPageItemsNumber = 0;
       }
       setTopPage(topPageItems[topPageItemsNumber]);
@@ -103,7 +104,7 @@ const Home: NextPage = () => {
         dir="/"
         image="/image/ogp/index.png"
       />
-      <img
+      <Image
         src={topPage.image}
         className={reAnim.opacitySix + " " + "fullImage"}
         alt={"BackImage"}
@@ -119,11 +120,11 @@ const Home: NextPage = () => {
           </h2>
           <hr />
         </div>
-        <a href={topPage.page}>
+        <Link href={topPage.page} passHref>
           <div className={styles.aboutContainer}>
             <h4>About</h4>
           </div>
-        </a>
+        </Link>
       </div>
       ß
       <Container className={styles.container}>
@@ -134,7 +135,7 @@ const Home: NextPage = () => {
             <br />
             日が経つ度にサイトは更新されるので、定期的に確認してもらうと嬉しいです。
           </p>
-          <img src={"/image/ogp/index.png"} alt={"このサイトの紹介"} />
+          <Image src={"/image/ogp/index.png"} alt={"このサイトの紹介"} />
         </Row>
         <Row className={styles.row}>
           <h2>New App</h2>
