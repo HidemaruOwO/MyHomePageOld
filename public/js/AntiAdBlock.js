@@ -2,13 +2,13 @@
  * Adi.js
  */
 
-;(function($) {
+;(function ($) {
 
     'use strict';
 
     var Adi;
 
-    $.adi = function(args) {
+    $.adi = function (args) {
 
         /**
          * Merge defaults with user options
@@ -22,7 +22,7 @@
      * Constructor
      */
 
-    Adi = function(args) {
+    Adi = function (args) {
 
         /**
          * Merge this with user options
@@ -44,7 +44,7 @@
      * Check for $.adblock
      */
 
-    Adi.prototype._check = function() {
+    Adi.prototype._check = function () {
         return $.adblock === undefined
     };
 
@@ -52,7 +52,7 @@
      * Start plugin
      */
 
-    Adi.prototype._init = function() {
+    Adi.prototype._init = function () {
         this._append();
     };
 
@@ -60,7 +60,7 @@
      * Set template
      */
 
-    Adi.prototype._setTemplate = function(title, content) {
+    Adi.prototype._setTemplate = function (title, content) {
 
         return '<div class="jquery-adi">' +
             '<div class="jquery-adi_content">' +
@@ -75,7 +75,7 @@
      * Append html
      */
 
-    Adi.prototype._append = function(callback) {
+    Adi.prototype._append = function (callback) {
 
         this.$el = $(this._setTemplate(this.title, this.content)).appendTo($(document.body)).addClass(this.theme);
         this._show();
@@ -85,7 +85,7 @@
      * Show modal
      */
 
-    Adi.prototype._show = function() {
+    Adi.prototype._show = function () {
 
         var that = this;
 
@@ -100,7 +100,7 @@
      * Modal controls
      */
 
-    Adi.prototype._controls = function() {
+    Adi.prototype._controls = function () {
 
         var that = this;
 
@@ -110,7 +110,7 @@
         }
 
         this.$el.on('click', '.jquery-adi_close', close);
-        $(document).on('keyup', function(e) {
+        $(document).on('keyup', function (e) {
             if (e.keyCode == 27)
                 close();
         });
@@ -120,7 +120,7 @@
      * Center modal
      */
 
-    Adi.prototype._center = function() {
+    Adi.prototype._center = function () {
         var $modal = this.$el.find('.jquery-adi_content');
         $modal.css('margin-top', -Math.abs($modal.outerHeight() / 2));
     };
@@ -133,10 +133,14 @@
         title: 'Adblock detected!',
         content: 'We noticed that you may have an Ad Blocker turned on. Please be aware that our site is best experienced with Ad Blockers turned off.',
         theme: 'light',
-        onOpen: function() {},
-        onClose: function() {},
-        active: function() {},
-        inactive: function() {}
+        onOpen: function () {
+        },
+        onClose: function () {
+        },
+        active: function () {
+        },
+        inactive: function () {
+        }
     };
 
 })(jQuery);
@@ -145,15 +149,15 @@
       End plugin
 ===========================*/
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     $.adi({
         theme: 'dark',
-        onOpen: function(el) {
+        onOpen: function (el) {
             /* $.adi working with animate.css */
             el.find('.jquery-adi_content').addClass('animated bounceInDown')
         },
-        onClose: function(el) {
+        onClose: function (el) {
             /**
              * Redirect
              * ========
@@ -164,7 +168,7 @@ $(document).ready(function() {
              * window.location.reload(true);
              */
         },
-        inactive: function() {
+        inactive: function () {
 
             var tpl = '<h3>You cool, G.</h3>' +
                 '<img src="//media.giphy.com/media/POWvddaQEHrgc/giphy.gif" />';
@@ -173,7 +177,7 @@ $(document).ready(function() {
 
             console.log('Adblock not detected :)');
         },
-        active: function() {
+        active: function () {
 
             var tpl = '<h3>You not cool, G</h3>' +
                 '<img src="//media.giphy.com/media/4lhJQOACaIfWU/giphy.gif" />';

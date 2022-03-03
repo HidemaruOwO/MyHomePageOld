@@ -1,18 +1,22 @@
 .nolineCenter a {
-  color: #000000;
-  text-decoration-line: none;
+    color: #000000;
+    text-decoration-line: none;
 }
+
 .nolineCenter a:hover {
-  color: #000000;
-  text-decoration-line: none;
+    color: #000000;
+    text-decoration-line: none;
 }
+
 .nolineCenter {
-  margin-right: auto;
-  margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
 }
+
 .nolineCenterImg {
-  text-align: center;
+    text-align: center;
 }
+
 .img {
-  text-align: center;
+    text-align: center;
 }

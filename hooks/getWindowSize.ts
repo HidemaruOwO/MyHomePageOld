@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 
 export const getWindowSize = () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
