@@ -13,17 +13,19 @@ const ItemUrl = ({title, description, image, url}: ItemProps) => {
         <>
             <Card style={{width: "18rem"}} className={styles.nolineCenter}>
                 <Link href={url} passHref>
-                    <div className={styles.img}>
-                        <Card.Img
-                            variant="top"
-                            src={image}
-                            className={styles.nolineCenterImg}
-                        />
+                    <div>
+                        <div className={styles.img}>
+                            <Card.Img
+                                variant="top"
+                                src={image}
+                                className={styles.nolineCenterImg}
+                            />
+                        </div>
+                        <Card.Body>
+                            <Card.Title>{title}</Card.Title>
+                            <Card.Text>{description}</Card.Text>
+                        </Card.Body>
                     </div>
-                    <Card.Body>
-                        <Card.Title>{title}</Card.Title>
-                        <Card.Text>{description}</Card.Text>
-                    </Card.Body>
                 </Link>
             </Card>
         </>
