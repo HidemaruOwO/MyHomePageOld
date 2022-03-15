@@ -81,8 +81,9 @@ const Home: NextPage = () => {
             <Image
                 src={topPage.image}
                 className={reAnim.opacitySix + " " + "fullImage"}
-                height={"100%"}
-                width={"100%"}
+                height={height}
+                width={width}
+                objectFit={"cover"}
                 alt={"BackImage"}
             />
             {/* eslint-disable-next-line @next/next/no-sync-scripts */}
@@ -102,7 +103,6 @@ const Home: NextPage = () => {
                     </div>
                 </Link>
             </div>
-            ß
             <Container className={styles.container}>
                 <Row id={"aboutSite"} className={styles.row}>
                     <h2>このサイトについて</h2>
@@ -114,8 +114,8 @@ const Home: NextPage = () => {
                     <Image
                         src={"/image/ogp/index.png"}
                         alt={"このサイトの紹介"}
-                        height={"100%"}
-                        width={"100%"}
+                        height={"630"}
+                        width={"1200"}
                     />
                 </Row>
                 <Row className={styles.row}>
