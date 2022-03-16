@@ -17,7 +17,12 @@ const HeadInfo = ({title, description, dir, image}: HeadI) => {
     var title: string = title;
     var pageDescription: string = description;
     var pageTitle: string = `${title} - Hide0`;
+    var pageUrl: string;
+    if (dir==="/") {
+        var pageUrl: string = "https://" + domain + "/";
+    }else {
     var pageUrl: string = "https://" + domain + "/" + dir;
+    }
     var pageType: string;
     if (pageUrl == "https://hide0.net/") {
         pageType = "website";
