@@ -304,8 +304,8 @@
 }
 
 .container img {
-    text-align: center;
     max-width: 90%;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
@@ -328,5 +328,5 @@
 }
 
 .twitter_viewer {
-    max-height: 442.2 ox;
+    max-height: 442.2px;
 }

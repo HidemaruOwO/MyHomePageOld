@@ -22,3 +22,13 @@ a {
 img {
     max-width: 100%;
 }
+
+.headerBlock {
+    height: 82px;
+}
+
+.heading {
+    padding: 0.5em;
+    background: #fae8d1;
+    border-left: solid 5px #ffaf58;
+}
