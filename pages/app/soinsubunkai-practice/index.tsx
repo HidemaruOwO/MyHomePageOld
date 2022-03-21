@@ -12,7 +12,7 @@ const SoinsubunkaiPractice: NextPage = () => {
         {name: "素数を含まない", value: "2"}
     ];
 
-    const onChangeKetasu: ChangeEventHandler<HTMLSelectElement> = async (e) => {
+    const onChangeKetasu: ChangeEventHandler<HTMLSelectElement> = (e) => {
         selectValue = e.target.value;
         console.log(selectValue+":onChange");
     };
