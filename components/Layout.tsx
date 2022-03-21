@@ -11,6 +11,7 @@ const Layout = ({children}: Props) => {
         <div>
             <Header/>
             <main>{children}</main>
+            <div className={"blank"}/>
             <Footer/>
         </div>
     );
