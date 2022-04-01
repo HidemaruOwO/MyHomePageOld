@@ -1,6 +1,7 @@
 import type {NextPage} from "next";
 import {Container, Row, Col, Button} from "react-bootstrap";
 
+import HeadInfo from "../../components/Head";
 import appList from "../../data/appList.json";
 import ItemUrl from "../../components/ItemUrl";
 import {useState} from "react";
@@ -12,6 +13,7 @@ const App: NextPage = () => {
     };
     return (
         <>
+            <HeadInfo title={"Slim App"} description={"無料で使える便利なウェブアプリ"} dir={"app"} image={"/image/ogp/SlimApp.png"}/>
             <div className={"headerBlock"}/>
             <Container>
                 <Row>
