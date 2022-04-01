@@ -63,7 +63,7 @@ const HeadInfo = ({title, description, dir, image}: HeadI) => {
             <meta property="og:title" content={title}/>
             <meta property="og:type" content={pageType}/>
             <meta property="og:description" content={pageDescription}/>
-            <meta property="og:image" content={ogpImage}/>
+            <meta property="og:image" content={"https://hide0.net" + ogpImage}/>
             <meta property="og:site_name" content="Hide0.Net"/>
             <meta property="og:local" content="ja_JP"/>
             {/* twitter */}
@@ -71,7 +71,7 @@ const HeadInfo = ({title, description, dir, image}: HeadI) => {
             <meta name="twitter:site" content="@Hidemal_OwO"/>
             <meta property="twitter:title" content={title}/>
             <meta property="twitter:description" content={pageDescription}/>
-            <meta property="twitter:image" content={ogpImage}/>
+            <meta property="twitter:image" content={"https://hide0.net" + ogpImage}/>
         </Head>
     );
 };
