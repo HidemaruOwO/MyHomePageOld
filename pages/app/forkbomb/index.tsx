@@ -12,7 +12,7 @@ const Profile: NextPage = () => {
                 dir={"/app/forkbomb"}
                 image={"/image/ogp/profile.png"}
             />
-            <script src="../../../public/js/forkbomb.js" async/>
+            <script src="/js/forkbomb.js" async/>
         </>
     );
 };
