@@ -1,5 +1,6 @@
 import type {NextPage} from "next";
 import HeadInfo from "../../../components/Head";
+import Script from "next/script";
 
 const Profile: NextPage = () => {
     return (
@@ -12,7 +13,7 @@ const Profile: NextPage = () => {
                 dir={"/app/forkbomb"}
                 image={"/image/ogp/profile.png"}
             />
-            <script src="/js/forkbomb.js" async/>
+            <Script src="/js/forkbomb.js" />
         </>
     );
 };
